@@ -1,0 +1,4 @@
+name: Analysis Report Memento (HTML)
+description: >
+   Generic template to rentder html reports
+create_dir: FALSE

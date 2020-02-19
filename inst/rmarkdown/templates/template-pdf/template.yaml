@@ -1,0 +1,4 @@
+name: Analysis Report Memento (PDF)
+description: >
+   Generic template to rentder pdf reports
+create_dir: FALSE

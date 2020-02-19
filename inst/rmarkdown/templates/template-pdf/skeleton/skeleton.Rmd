@@ -1,0 +1,70 @@
+---
+title: "Title"
+subtitle: "Subtitle"
+
+author: 
+  - name: "Fisrt Name Surname"
+    affiliation: "1,2"
+    email: "email@mail.com"
+  - name: "Fisrt Name Surname"
+    affiliation: "1,3"
+    email: "email@mail.com"
+    
+date: "`r format(Sys.time(), '%e %B %Y')`"
+
+affiliation:
+  - id: "1"
+    name: "Centre Hospitalier Universitaire de Bordeaux"
+  - id: "2"
+    name: "Centre INSERM U1219, Bordeaux Population Health"
+  - id: "3"
+    name: "Institut de Santé Publique, d'Epidémiologie et de Développement (ISPED), Université de Bordeaux"
+    
+output: MementoTools::memento_pdf
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Part 1
+
+Les informations à changer se trouve dans le YAML (l'en-tête du fichier)
+
+* enlevez/ajoutez les blocks `author` 
+* enlevez/modifiez/ajoutez les blocks `affiliation` 
+* laissez le champ vide ou supprimer pour ne pas afficher un élément (par exemple `subtitle`)
+* la table des matières affiche les titres jusqu'au 3ème niveau (###)
+
+Toutes les suggestions sont les bienvenues! Merci
+
+# Part 2
+
+## Element 1
+
+Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte 
+
+## Element 2 {.tabset .tabset-fade}
+
+### Figure 1
+
+Exemple plot 1
+
+```{r}
+a <- rnorm(100)
+b <- 50 + a*10 + rnorm(100, 5, 2) 
+plot(x = a, y = b)
+```
+
+### Figure 2
+
+Exemple plot 2
+
+```{r}
+hist(rnorm(500))
+```
+
+# Part 2
+
+Texte texte texte texte
+
