@@ -2,15 +2,15 @@
 title: "Title"
 subtitle: "Subtitle"
 
-author: 
-  - name: "Fisrt Name Surname"
+date: "`r format(Sys.time(), '%e %B %Y')`"
+
+author:
+  - name: "Auteur1"
     affiliation: "1,2"
     email: "email@mail.com"
-  - name: "Fisrt Name Surname"
+  - name: "Auteur2"
     affiliation: "1,3"
     email: "email@mail.com"
-    
-date: "`r format(Sys.time(), '%e %B %Y')`"
 
 affiliation:
   - id: "1"
@@ -19,8 +19,19 @@ affiliation:
     name: "Centre INSERM U1219, Bordeaux Population Health"
   - id: "3"
     name: "Institut de Santé Publique, d'Epidémiologie et de Développement (ISPED), Université de Bordeaux"
-    
-output: MementoTools::memento_pdf
+
+colorlinks: true
+fontsize: 11pt
+geometry: margin=1.1in
+
+lang: "fr"
+output: 
+  pdf_document:
+    keep_tex: true
+    pandoc_args: --highlight-style=perso.theme
+    toc: true
+    toc_depth: 3
+    template: default_4.latex
 ---
 
 ```{r setup, include=FALSE}
@@ -29,14 +40,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Part 1
 
-Les informations à changer se trouve dans le YAML (l'en-tête du fichier)
+Les informations à changer se trouve dans le YAML (l'en-tête du fichier) pour
 
-* enlevez/ajoutez les blocks `author` 
-* enlevez/modifiez/ajoutez les blocks `affiliation` 
-* laissez le champ vide ou supprimer pour ne pas afficher un élément (par exemple `subtitle`)
+* changer le paramètre `lang` en "en" pour afficher la date en anglais ainsi que **"Contents"** au lieu de **"Table des matières"**
+* enlever/modifier/ajouter les blocks `author`, de plus les paramètres `name`, `affiliation` et `mail` sont optionnels
+* enlever/modifier/ajouter les blocks `affiliation` 
+* laisser le champ vide ou le supprimer pour ne pas afficher un élément (par exemple `subtitle`)
 * la table des matières affiche les titres jusqu'au 3ème niveau (###)
 
-Toutes les suggestions sont les bienvenues! Merci
+N'hésitez pas à me signaler les bugs et toutes les suggestions sont les bienvenues! Merci
+Le livre [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) est la meilleure référence pour apprendre le fonctionnement de Rmarkdown notemment avec HTML ou LaTeX (pdf).
 
 # Part 2
 
@@ -44,7 +57,7 @@ Toutes les suggestions sont les bienvenues! Merci
 
 Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte 
 
-## Element 2 {.tabset .tabset-fade}
+## Element 2
 
 ### Figure 1
 
@@ -52,8 +65,9 @@ Exemple plot 1
 
 ```{r}
 a <- rnorm(100)
-b <- 50 + a*10 + rnorm(100, 5, 2) 
+b <- a*10 + rnorm(100, 50, 2) 
 plot(x = a, y = b)
+abline(a = 50, b = 10)
 ```
 
 ### Figure 2
