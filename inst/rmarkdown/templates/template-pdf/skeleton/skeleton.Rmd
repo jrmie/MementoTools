@@ -23,15 +23,9 @@ affiliation:
 colorlinks: true
 fontsize: 11pt
 geometry: margin=1.1in
-
 lang: "fr"
-output: 
-  pdf_document:
-    keep_tex: true
-    pandoc_args: --highlight-style=perso.theme
-    toc: true
-    toc_depth: 3
-    template: default_4.latex
+
+output: MementoTools::memento_pdf
 ---
 
 ```{r setup, include=FALSE}
