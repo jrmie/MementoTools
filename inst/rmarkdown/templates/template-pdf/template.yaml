@@ -1,4 +1,4 @@
-name: Analysis Report Memento (PDF)
+name: Rapport d'analyse Memento (PDF)
 description: >
-   Generic template to rentder pdf reports
+   Template de document PDF pour la cohorte Memento
 create_dir: FALSE

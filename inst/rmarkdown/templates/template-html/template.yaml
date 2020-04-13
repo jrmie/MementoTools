@@ -1,4 +1,4 @@
-name: Analysis Report Memento (HTML)
+name: Rapport d'analyse Memento (HTML)
 description: >
-   Generic template to rentder html reports
+   Template de document HTML pour la cohorte Memento
 create_dir: FALSE
