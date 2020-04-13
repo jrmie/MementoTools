@@ -1,6 +1,31 @@
 
 body {
   text-align: justify;
+  font-family: utopia;
+}
+
+#header {
+  margin-bottom: 90px;
+}
+
+h1 {
+  font-size: 27px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+.title {
+  font-size: 35px;
+}
+
+.subtitle {
+  font-size: 30px;
 }
 
 a {
@@ -12,13 +37,15 @@ a {
 }
 
 .author_afil {
-  font-size: 14px;
+  font-size: 12px;
   vertical-align: super;
   color: rgba(0, 0, 0, 0.5);
 }
 
 .affiliation {
+  font-size: 11px;
   font-style: italic;
+  color: #636363;
 }
 
 .email {

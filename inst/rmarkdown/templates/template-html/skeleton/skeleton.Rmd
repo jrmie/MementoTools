@@ -3,10 +3,10 @@ title: "Title"
 subtitle: "Subtitle"
 
 author: 
-  - name: "Fisrt Name Surname"
+  - name: "Auteur1"
     affiliation: "1,2"
     email: "email@mail.com"
-  - name: "Fisrt Name Surname"
+  - name: "Auteur2"
     affiliation: "1,3"
     email: "email@mail.com"
     
@@ -19,7 +19,10 @@ affiliation:
     name: "Centre INSERM U1219, Bordeaux Population Health"
   - id: "3"
     name: "Institut de Santé Publique, d'Epidémiologie et de Développement (ISPED), Université de Bordeaux"
-    
+
+lang: "fr"
+width_page: 1200px
+
 output: MementoTools::memento_html
 ---
 

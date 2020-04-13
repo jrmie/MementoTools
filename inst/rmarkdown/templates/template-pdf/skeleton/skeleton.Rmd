@@ -21,6 +21,7 @@ affiliation:
     name: "Institut de Santé Publique, d'Epidémiologie et de Développement (ISPED), Université de Bordeaux"
 
 colorlinks: true
+fontfamily: utopia
 fontsize: 11pt
 geometry: margin=1.1in
 lang: "fr"
@@ -36,14 +37,24 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Les informations à changer se trouve dans le YAML (l'en-tête du fichier) pour
 
-* changer le paramètre `lang` en "en" pour afficher la date en anglais ainsi que **"Contents"** au lieu de **"Table des matières"**
-* enlever/modifier/ajouter les blocks `author`, de plus les paramètres `name`, `affiliation` et `mail` sont optionnels
+* changer le paramètre `lang` : "en" pour afficher la date en anglais ainsi que **"Contents"** au lieu de **"Table des matières"**
+* enlever/modifier/ajouter les blocks `author` (les paramètres `name`, `affiliation` et `mail` sont optionnels)
 * enlever/modifier/ajouter les blocks `affiliation` 
-* laisser le champ vide ou le supprimer pour ne pas afficher un élément (par exemple `subtitle`)
-* la table des matières affiche les titres jusqu'au 3ème niveau (###)
+* laisser un champ vide ou le supprimer pour ne pas afficher un élément (par exemple `subtitle`)
+* la table des matières affiche les titres jusqu'au 3ème niveau (niveau 1 = #, niveau 2 = ##, niveau 3 = ###)
+* `geometry` permet de changer l'aspect du document: ici `margin` pour spécifier la largeur de la marge
+* `colorlinks` pour colorer les liens url et adresses e-mail
 
-N'hésitez pas à me signaler les bugs et toutes les suggestions sont les bienvenues! Merci
+Pour la taille des figures vous pouvez la modifier en changeant les paramètres `fig.height` et `fig.width` dans le **chunck r**
+
+```{r, fig.height=2, fig.width=2, fig.align='right'}
+hist(rnorm(500), main = NULL)
+```
+
+Merci de me signaler les bugs à \href{mailto:jeremie.lespinasse@u-bordeaux.fr}{jeremie.lespinasse@u-bordeaux.fr}. Toutes les suggestions sont les bienvenues! \par
 Le livre [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/) est la meilleure référence pour apprendre le fonctionnement de Rmarkdown notemment avec HTML ou LaTeX (pdf).
+
+\pagebreak
 
 # Part 2
 
@@ -52,6 +63,10 @@ Le livre [R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown
 Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte Texte 
 
 ## Element 2
+
+### Equation mathematique
+
+$$Y_i = \beta_0 + \beta_1X_i + \beta_2.t_{ij} + \alpha_{0i} + \alpha_{1i}.t + \epsilon_{ij}$$
 
 ### Figure 1
 
@@ -71,8 +86,4 @@ Exemple plot 2
 ```{r}
 hist(rnorm(500))
 ```
-
-# Part 2
-
-Texte texte texte texte
 

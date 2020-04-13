@@ -390,7 +390,7 @@ $endif$
 }
 
 div.main-container {
-  max-width: 1200px;
+  max-width: $width_page$;
 }
 
 div.tocify {
@@ -501,6 +501,8 @@ $if(date)$
 <h4 class="date">$date$</h4>
 $endif$
 
+<img src=$logo$ alt="Memento" style="height:60px;display:block;margin-left: auto;margin-right: auto;margin-top: 25px">
+
 <hr>
 $for(author)$
 $if(author.name)$
@@ -521,7 +523,7 @@ $endfor$
 <p>
 $for(affiliation)$
 $if(affiliation.id)$
-<span class="affiliation">$affiliation.id$* $affiliation.name$</span><br>
+<span class="affiliation">$affiliation.id$. $affiliation.name$</span><br>
 $endif$
 $endfor$
 </p>
